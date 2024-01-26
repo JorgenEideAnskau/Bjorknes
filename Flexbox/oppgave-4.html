@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="no">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Flexbox-skoletime</title>
+  </head>
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+    }
+    .gruppe {
+      display: flex;
+      flex-direction: column;
+      height: 100vh;
+    }
+
+    .top {
+      background-color: aqua;
+      border: 1px solid black;
+      flex: 2;
+      border-bottom: 50px solid black;
+    }
+
+    .bunn {
+      background-color: green;
+      flex: 1;
+      border-top: 50px solid black;
+    }
+  </style>
+  <body>
+    <div class="gruppe">
+      <div class="top"></div>
+      <div class="midten"></div>
+      <div class="bunn"></div>
+    </div>
+  </body>
+</html>

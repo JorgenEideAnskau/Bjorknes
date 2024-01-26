@@ -1,0 +1,67 @@
+body {
+  background-color: lightgrey;
+  font-size: 30px;
+}
+
+.innpakning {
+  display: flex; /* For å si at vi skal bruke flex-systemet*/
+  flex-direction: column;
+  width: 90%;
+  margin: auto;
+  background-color: red;
+  padding: 10px;
+}
+
+.topptekst {
+  flex-basis: 100%; /* For å si at denne skal ta opp all plassen i bredden /Er det samme som width */
+  background-color: yellow;
+  color: red;
+  padding: 10px;
+}
+
+.midten {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    background-color: green;
+}
+
+.meny {
+    flex: 0.5;
+    background-color: orange;
+    padding: 10px;
+}
+
+.hovedinnhold {
+    flex: 1;
+    background-color: white;
+    padding: 10px;
+}
+
+.bunntekst {
+    flex-basis: 100%;
+    background-color: black;
+    color: white;
+    padding: 10px;
+}
+
+button {
+    display: block;
+    width: 100px;
+    background-color: #4CAF50; 
+    color: white; 
+    margin: 20px;
+    padding: 10px;
+    border: none; 
+    border-radius: 5px; 
+    cursor: pointer;
+    transition: background-color 0.3s ease; 
+}
+
+a {
+    text-decoration: none;
+}
+
+button:hover {
+    background-color: #45a049;
+}

@@ -1,0 +1,24 @@
+body {
+    padding: 0;
+    margin: 0;
+    background-color: #A6CFD5;
+}
+
+header {
+    background-color: #C2E7D9;
+    text-align: center;
+    padding: 10px;
+    position: sticky;
+    top: 0;
+}
+
+div {
+    height: 100vh;
+}
+
+p {
+    font-size: 20px;
+    font-family: 'Roboto', sans-serif;
+    text-align: center;
+    padding: 10px;
+}

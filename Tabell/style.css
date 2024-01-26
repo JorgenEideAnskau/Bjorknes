@@ -1,0 +1,30 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-image: url("images/Mountain-Background.jpg");
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50vh;
+}
+
+div {
+    background-color: rgba(255, 255, 255, 0.5);
+    border-radius: 10px;
+    padding: 10px;
+    margin: 10px;
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+    border: 1px black solid;
+    border-radius: 50px;
+}
+
+th, td {
+    text-align: left;
+    padding: 8px;
+    border: 1px black solid;
+    text-align: center;
+}
