@@ -89,14 +89,17 @@ div .info {
 }
 
 .info {
-  background: 
-    linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.4)), 
-    url('Bilder/Fjell.jpg');
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
+  display: flex;
+}
+
+.info .profil {
+  margin: auto;
+  padding: 10px;
+  background-color: #0d0221;
+  color: #c2e7d9;
   height: 100vh;
+  width: 50%;
+  text-align: center;
 }
 
 h2 {
