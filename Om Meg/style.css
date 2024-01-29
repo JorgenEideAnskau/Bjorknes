@@ -9,17 +9,28 @@ body {
 }
 
 nav {
-    background: red;
-    height: 50px;
+    color: #01352C;
+    height: 70px;
     display: flex;
     justify-content: flex-end;
     align-items: center;
-    background-color: #FFA69E;
+    background-color: #E1EACD;
+
+}
+
+.header {
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
 }
 
 nav .logo {
     margin-right: auto;
     margin-left: 20px;
+}
+
+nav .logo img {
+    border-radius: 100%;
+    width: 50px;
+    height: 50px;
 }
 
 nav ul {
@@ -30,23 +41,16 @@ nav ul {
 nav ul li {
     display: inline-block;
     text-align: center;
+    padding: 0 20px;
 }
 
-.info {
-    background-color: red;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    padding: 150px;
-
-}
-
-.info h1 {
+nav ul li a {
+    text-decoration: none;
     color: #01352C;
-    font-family: Lalezar;
-    font-size: 64px;
+    font-family: Lalezar, sans-serif;
+    font-size: 24px;
     font-style: normal;
     font-weight: 400;
     line-height: normal;
 }
+
