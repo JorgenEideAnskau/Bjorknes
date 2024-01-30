@@ -1,0 +1,56 @@
+body {
+  background-color: lightgreen;
+}
+
+.innpakning {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.lenker {
+  background-color: lightblue;
+  flex-basis: 200px;
+  margin: 0 20px;
+  border: 8px solid black;
+}
+
+.tekst {
+  flex-basis: 600px;
+  background-color: lightblue;
+  margin: 0 10px 0 0;
+  border: 8px solid black;
+  text-align: center;
+  padding: 10px;
+}
+
+.bilder {
+  flex-basis: 400px;
+  background-color: lightblue;
+  margin: 0 20px 0 10px;
+  border: 8px solid black;
+}
+
+button {
+  display: block;
+  width: 100px;
+  background-color: pink;
+  border-radius: 10px;
+  margin: 10px;
+  padding: 10px;
+}
+
+img {
+  display: block;
+  margin: 20px auto;
+  border: 3px solid red;
+}
+
+h1 {
+  margin-left: 300px;
+  color: red;
+}
+
+h2 {
+    text-align: center;
+}
