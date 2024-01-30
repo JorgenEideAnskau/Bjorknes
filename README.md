@@ -1,3 +1,3 @@
-# Bjørknes Skole
+# Bjørknes Skole - Undervisning
 
-Velkommen til det offisielle GitHub-repositoriet for Bjørknes Skole. Dette repositoriet inneholder koden for ulike prosjekter og oppgaver utført ved Bjørknes Skole.
+Velkommen til GitHub-repositoriet for Jørgens oppgaver fra IT-kurset ved Bjørknes Skole. Dette repositoriet inneholder koden for diverse prosjekter og oppgaver som er utført ved Bjørknes Skole.
