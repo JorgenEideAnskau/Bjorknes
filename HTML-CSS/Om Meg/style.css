@@ -27,7 +27,8 @@ header {
 header .logo {
   margin-right: auto;
   margin-left: 20px;
-  margin-left: 20px;
+  text-decoration: none;
+  color: #01352c;
 }
 
 header .logo a {
@@ -45,11 +46,6 @@ header h1 {
   font-size: 23px;
   font-weight: 400;
   margin-left: 10px;
-}
-
-header .logo a {
-  text-decoration: none;
-  color: #01352c;
 }
 
 nav {
@@ -88,6 +84,12 @@ div.main .info {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  color: #01352c;
+  font-family: KoHo, sans-serif;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
 }
 
 div.main .bilde {
@@ -103,7 +105,7 @@ div.main .bilde img {
 
 div.main .info h1 {
   color: #01352c;
-  font-family: Lalezar;
+  font-family: Lalezar, sans-serif;
   font-size: 64px;
   font-style: normal;
   font-weight: 400;
@@ -112,19 +114,10 @@ div.main .info h1 {
 
 div.main .info h1 em {
   color: #01352c;
-  font-family: "Leckerli One";
+  font-family: "Leckerli One", cursive;
   font-size: 64px;
   font-style: normal;
   font-weight: 400;
-  line-height: normal;
-}
-
-div.main .info {
-  color: #01352c;
-  font-family: KoHo;
-  font-size: 20px;
-  font-style: normal;
-  font-weight: 600;
   line-height: normal;
 }
 
@@ -140,4 +133,14 @@ div.main .info {
   z-index: -1;
   bottom: -70px;
   left: -70px;
+}
+
+footer {
+  background-color: #01352c;
+  color: #e1eacd;
+  padding: 20px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
 }
