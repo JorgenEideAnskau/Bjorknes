@@ -1,0 +1,132 @@
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    font-family: 'Inter', sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    text-shadow: 6px 6px 4px rgba(0, 0, 0, 0.5);
+    letter-spacing: -0.04em;
+    font-size: 72px;
+    margin-bottom: 20px;
+}
+
+nav {
+    display: flex;
+    flex-direction: row;
+    padding: 20px 20px;
+    background-color: #191919;
+    position: fixed;
+    width: 100%;
+    z-index: 1000;
+}
+
+nav .nav-left {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+nav .nav-left #github {
+    text-shadow: 6px 6px 4px rgba(0, 0, 0, 0.5);
+    letter-spacing: -0.04em;
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+nav .nav-left #github a {
+    color: #F3F3F3;
+    text-decoration: none;
+}
+
+nav .nav-right {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    margin-right: 200px;
+    margin-left: auto;
+}
+
+nav .nav-right a {
+    margin: 0 20px;
+    color: #F3F3F3;
+    text-decoration: none;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+nav img {
+    width: 100px;
+    height: auto;
+    border-radius: 100%;
+}
+
+div.hero-container {
+    display: flex;
+    flex-wrap: wrap;
+    height: 80rem;
+}
+
+div.hero-left {
+    flex: 3;
+    background-color: #191919;
+    color: #F3F3F3;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+div.hero-left .hero-info {
+    width: 80%;
+    margin: 0 60px;
+}
+
+div.hero-right {
+    flex: 2;
+    background-color: #191919;
+    background-image: url(Bilder/Selfie.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+.button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #FFFFFF;
+    color: #0D0D0D;
+    margin-top: 60px;
+    padding: 24px 20px;
+    width: 180px;
+    border-radius: 20px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 24px;
+}
+
+.button .button-icon {
+    width: 24px;
+    height: auto;
+    margin-left: 0.5em;
+}
+
+.about-me {
+    display: flex;
+    flex-wrap: wrap;
+    height: 80rem;
+    animation-duration: 3s;
+}
+
+p {
+    font-size: 1.5rem;
+    opacity: 0.8;
+}
