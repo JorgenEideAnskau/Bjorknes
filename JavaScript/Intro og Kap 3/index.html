@@ -7,11 +7,13 @@
   </head>
   <body>
     <script>
-        let adjekt1 = prompt("Skriv inn et adjektiv");
-        let adjekt2 = prompt("Skriv inn et adjektiv");
-        let adjekt3 = prompt("Skriv inn et adjektiv");
-
-        document.write("Det var en gang en " + adjekt1 + " mann som het Ole. Han var veldig " + adjekt2 + " og " + adjekt3 + ". Han var så " + adjekt2 + " at han ble kalt " + adjekt1 + " " + adjekt3 + ".")
+      let svar = prompt("Hvem skrev Et dukkehjem?");
+      svar = svar.toLowerCase();
+      if (svar === "henrik ibsen") {
+        alert("Riktig!");
+      } else {
+        alert("Feil!");
+      }
     </script>
   </body>
 </html>
