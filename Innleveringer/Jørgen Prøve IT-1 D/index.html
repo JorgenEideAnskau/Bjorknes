@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="no">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <header>
+      <h1>Prøve IT-1 D</h1>
+    </header>
+
+    <hr />
+
+    <div class="oppgave-1">
+      <h2>Oppgave 1</h2>
+      <p>
+        Lag et program som lager et tilfeldig tall mellom 1 og 10 (1 og 10 skal
+        være med). I utskriften skal tallet oppgis, og samtidig en melding om
+        tallet er over, under eller lik 5. <br /><br />
+        Eksempel på utskrift: <br /><br />
+        <em>Det tilfeldige tallet er 10 <br />Tallet er større enn 5</em>
+      </p>
+
+      <h2>Svar:</h2>
+
+      <script>
+        let num = Math.floor(Math.random() * 10) + 1;
+        document.write("Det tilfeldige tallet er: " + num + "<br>");
+        if (num > 5) {
+          document.write("Tallet er <u>større</u> enn 5");
+        } else if (num < 5) {
+          document.write("Tallet er <u>mindre</u> enn 5");
+        } else {
+          document.write("Tallet er lik 5");
+        }
+      </script>
+    </div>
+
+    <hr />
+
+    <div class="oppgave-2">
+      <h1>Oppgave 2</h1>
+      <p>
+        Lag et program der brukeren skriver inn lykketallet sitt. Gi
+        tilbakemelding på om lykketallet er et odde- eller partall.
+      </p>
+
+      <h2>Svar:</h2>
+
+      <p>Skriv in tallet ditt her: 👇</p>
+
+      <input id="num" type="number" />
+      <button onclick="checkNumber()">Send inn</button>
+      <p id="result"></p>
+
+      <script>
+        function checkNumber() {
+          let num = document.getElementById("num").value;
+          let result = document.getElementById("result");
+
+          if (num == "" || num == null) {
+            result.textContent = "Du må skrive inn et tall";
+          } else if (num % 2 == 0) {
+            result.textContent = "Tallet ditt er et partall";
+          } else {
+            result.textContent = "Tallet ditt er et oddetall";
+          }
+        }
+      </script>
+    </div>
+
+    <hr />
+
+    <div class="oppgave-3">
+      <h1>Oppgave 3</h1>
+      <p>
+        Lag et program der brukeren skriver inn navnet sitt i en prompt-boks og
+        i en annen prompt-boks, skriver inn alderen sin. <br />
+        Utskriften skal gjenta navnet og skrive ut den tredje bokstaven i
+        navnet. I tillegg skal det i utskriften stå hvor mange måneder det er
+        til brukeren er 100 år, med den forenkla formelen: <br />
+        Antall måneder = (100 – alder) * 12 <br />
+        <br />
+        Helt til slutt skal du skrive ut hvilket nummer bokstav nr 3 i navnet,
+        er i alfabetet. Eksempel på utskrift der brukeren heter Morten og er 34
+        år: <br />
+        <br />
+        <b
+          >Hei Morten. Om 792 måneder er du 100 år. Den tredje bokstaven i
+          navnet ditt er: r Bokstaven r er nummer 18 i alfabetet.
+        </b>
+      </p>
+
+      <h2>Svar:</h2>
+
+      <em
+        ><b><p id="svar"></p></b
+      ></em>
+
+      <script>
+        let navn = prompt("Hva heter du?");
+        console.log(navn);
+        let alder = prompt("Hvor gammel er du?");
+        console.log(alder);
+
+        let alfabetet = "abcdefghijklmnopqrstuvwxyzæøå";
+
+        let svar = document.getElementById("svar");
+        let antallManeder = (100 - alder) * 12;
+        let tredjeBokstav = navn.charAt(2);
+        let bokstavNummer = alfabetet.indexOf(tredjeBokstav) + 1;
+
+        svar.textContent = `Hei, ${navn}. Om ${antallManeder} måneder er du 100 år. Den tredje bokstaven i navnet ditt er: ${tredjeBokstav}. Bokstaven ${tredjeBokstav} er nummer ${bokstavNummer} i alfabetet.`;
+      </script>
+    </div>
+
+    <hr />
+
+    <div class="oppgave-4">
+      <h1>Oppgave 4</h1>
+      <p>
+        Lag et program der brukeren skriver inn om man tar buss eller sykkel til
+        skolen. Bruk vedlagte bilder på It’s (buss.jpg og sykkel.jpg) og lag
+        programmet slik at transportmiddel til skolen vises som bilde, i tillegg
+        til tekst.
+      </p>
+
+      <h2>Svar:</h2>
+
+      <div class="bussEllerSykkel">
+        <h1>Sykkel eller buss til skolen?</h1>
+        <input type="text" id="bussEllerSykkel" />
+        <button onclick="checkTransport()">Send inn</button>
+        <img
+          id="transportBilde"
+          alt="Bilde av buss eller sykkel."
+          src="Bilder/Spørsmåltegn.jpeg"
+        />
+        <p id="utskrift"></p>
+      </div>
+
+      <script>
+        function checkTransport() {
+          let transport = document
+            .getElementById("bussEllerSykkel")
+            .value.trim()
+            .toUpperCase();
+          let bilde = document.getElementById("transportBilde");
+          let utskrift = document.getElementById("utskrift");
+
+          switch (transport) {
+            case "SYKKEL":
+              bilde.src = "Bilder/sykkel.jpg";
+              utskrift.textContent = "Du sykler til skolen";
+              break;
+            case "BUSS":
+              bilde.src = "Bilder/buss.jpg";
+              utskrift.textContent = "Du tar buss til skolen.";
+              break;
+            default:
+              utskrift.textContent = "Du må skrive inn buss eller sykkel.";
+              bilde.src = "Bilder/Spørsmåltegn.jpeg"; // Fjerner bilde hvis brukeren skriver noe annet enn buss eller sykkel
+          }
+        }
+      </script>
+    </div>
+
+    <script>
+      // Kjører alle funksjonene når brukeren trykker på enter
+      let inputs = document.querySelectorAll("input");
+
+      for (let input of inputs) {
+        input.addEventListener("keypress", function (e) {
+          if (e.key === "Enter") {
+            checkTransport();
+            checkNumber();
+            e.target.value = "";
+          }
+        });
+      }
+    </script>
+  </body>
+</html>
