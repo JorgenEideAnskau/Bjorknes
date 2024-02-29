@@ -1,14 +1,15 @@
 <!DOCTYPE html>
-<html lang="no">
+<html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Løkker - Oppgave 1</title>
+    <title>Løkker - Oppgave 3</title>
 
     <style>
         * {
             margin: 0;
+            text-align: center;
         }
 
         body {
@@ -28,6 +29,8 @@
             padding: 20px;
             background-color: #CEB7B3;
             border-radius: 8px;
+            width: 50svw;
+            height: 40vh;
         }
 
         input {
@@ -66,33 +69,34 @@
 <body>
 
     <div>
-        <h1>Bursdagsfest</h1>
+        <h1>Tallrekke</h1>
         <form>
-            <input type="number">
-            <button type="submit" id="submit-btn">Trykk for sum</button>
+            <input type="text" id="input">
+            <button>Submit</button>
         </form>
-        <p></p>
+        <p id="output"></p>
     </div>
 
     <script>
-        const button = document.getElementById('submit-btn');
+        const form = document.querySelector('form');
         const input = document.querySelector('input');
-        const p = document.querySelector('p');
+        const output = document.getElementById('output');
 
-        button.addEventListener('click', () => {
-            event.preventDefault();
-            if (input.value === '' || input.value <= 0) {
-                p.textContent = 'Skriv inn antall personer som skal delta i festen!';
+        form.addEventListener('submit', (e) => {
+            e.preventDefault();
 
-            } else {
-                p.textContent = "Sum: " + (input.value * 300) + "kr";
-                input.value = '';
+            let sum = 0;
+            let tall = input.value;
+            input.value = '';
+
+            for (let i = 0; i <= 50; i++) {
+                if (i % tall === 0) {
+                    output2.innerHTML += `${i}<br>`;
+                    sum += i;
+                }
             }
         });
-
     </script>
-
-
 </body>
 
 </html>

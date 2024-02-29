@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html lang="no">
+<html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Løkker - Oppgave 1</title>
+    <title>Løkker - Oppgave 2</title>
 
     <style>
         * {
@@ -66,33 +66,34 @@
 <body>
 
     <div>
-        <h1>Bursdagsfest</h1>
+        <h1>Etternavn</h1>
         <form>
-            <input type="number">
-            <button type="submit" id="submit-btn">Trykk for sum</button>
+            <input type="text" id="input">
+            <button>Submit</button>
         </form>
-        <p></p>
+        <p id="output"></p>
+        <p id="output2"></p>
     </div>
 
     <script>
-        const button = document.getElementById('submit-btn');
-        const input = document.querySelector('input');
-        const p = document.querySelector('p');
+        const input = document.getElementById('input');
+        const output = document.getElementById('output');
+        const output2 = document.getElementById('output2');
+        const button = document.querySelector('button');
+
 
         button.addEventListener('click', () => {
             event.preventDefault();
-            if (input.value === '' || input.value <= 0) {
-                p.textContent = 'Skriv inn antall personer som skal delta i festen!';
-
+            if (input.value === '') {
+                output.textContent = 'Du må skrive inn et etternavn';
+                output2.textContent = '';
             } else {
-                p.textContent = "Sum: " + (input.value * 300) + "kr";
+                output.textContent = `Ditt etternavn er: ${input.value}`;
+                output2.textContent = `Det består av ${input.value.length} bokstaver.`;
                 input.value = '';
             }
         });
-
     </script>
-
-
 </body>
 
 </html>
